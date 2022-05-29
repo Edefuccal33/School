@@ -13,3 +13,5 @@ Entity: "@EntityListeners" is used to make the object able for fill in "@Creatio
 Dto: Here are defined attributes which demand validation to the controller.
 
 Exception: Custom exception created with an exception handler to provide a full entity response with message, body, headers, status and web request).
+
+POSTMAN REQUEST: Request have been exported in the file "School.postman_collection.json" from POSTMAN if you want to try this API quickly.
