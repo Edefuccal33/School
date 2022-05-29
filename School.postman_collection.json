@@ -1,0 +1,590 @@
+{
+	"info": {
+		"_postman_id": "3e2765e2-d19a-4b5a-b39a-7b3d7347c229",
+		"name": "School",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Sing up",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"fede@gmail.com\",\r\n    \"password\":\"fede@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sing in",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"fede@gmail.com\",\r\n    \"password\":\"fede@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/auth/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"auth",
+								"signin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get Students with Filters",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/students/custom",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"custom"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "juan",
+							"disabled": true
+						},
+						{
+							"key": "birthDate",
+							"value": "2020-08-30",
+							"disabled": true
+						},
+						{
+							"key": "subjects",
+							"value": "1",
+							"disabled": true
+						},
+						{
+							"key": "order",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Students",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subjects",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Teachers",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/teachers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Student",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Juan\",\r\n    \"email\": \"juan@gmail.com\",\r\n    \"birthDate\": \"2020-08-30\",\r\n    \"phoneNumber\": \"261544652\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Subject",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Math\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subjects",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Teacher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Mr. Smith\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/teachers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"teachers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Student",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Gonzalo Dominguez\",\r\n    \"email\": \"gonzalo_dominguez@gmail.com\",\r\n    \"birthDate\": \"2020-05-10\",\r\n    \"phoneNumber\": \"2615980746\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/students/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Subject",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Aritmethics\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/subjects/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Teacher",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mr. Carl Smith\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/teachers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"teachers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft Delete Subject",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/subjects/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft Delete Student",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Soft Delete Teacher",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/teachers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"teachers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enroll Student to Subject",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/subjects/1/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects",
+						"1",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Teacher to Subject",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/subjects/1/teachers/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects",
+						"1",
+						"teachers",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unenroll Student from Subject",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/subjects/1/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects",
+						"1",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unassign Teacher from Subject",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmZWRlQGdtYWlsLmNvbSIsImV4cCI6MTY1Mzc3ODc2NywiaWF0IjoxNjUzNzQyNzY3fQ.eN4BnhygwHRXeAEiCbEuwsZJ5jWEFgWRYR9FX3T3yPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/subjects/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"subjects",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
