@@ -22,6 +22,7 @@ import javax.validation.Valid;
 
 @RestController
 @CrossOrigin(origins = "*")
+// @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/auth")
 public class UserAuthController {
 
@@ -46,7 +47,7 @@ public class UserAuthController {
     }
 
     @PostMapping("/signin")
-    public ResponseEntity<AuthenticationResponse> singIn(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
+    public ResponseEntity<?> singIn(@RequestBody AuthenticationRequest authenticationRequest) throws Exception {
 
         UserDetails userDetails;
         try {
@@ -59,6 +60,6 @@ public class UserAuthController {
         }
 
         final String jwt = jwtUtils.generateToken(userDetails);
-        return ResponseEntity.ok(new AuthenticationResponse(jwt));
+        return ResponseEntity.ok(new AuthenticationResponse(jwt, userDetails.getUsername()));
     }
 }

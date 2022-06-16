@@ -9,4 +9,5 @@ import lombok.Setter;
 @AllArgsConstructor
 public class AuthenticationResponse {
     private String jwt;
+    private String email;
 }

@@ -6,6 +6,7 @@ import com.backend.school.dto.SubjectDTO;
 import com.backend.school.service.SubjectService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
@@ -18,6 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 import lombok.AllArgsConstructor;
 
 @RestController
+// @CrossOrigin(origins = "*")
+@CrossOrigin(origins = "http://localhost:3000")
 @AllArgsConstructor
 @RequestMapping("subjects")
 public class SubjectController {
